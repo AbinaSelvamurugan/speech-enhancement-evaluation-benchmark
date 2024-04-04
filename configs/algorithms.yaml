@@ -1,0 +1,19 @@
+spectral_subtraction:
+  subtraction_strength: 1.15
+  spectral_floor: 0.07
+  nperseg: 512
+  hop: 128
+spectral_gating:
+  threshold: 1.5
+  reduction_strength: 0.92
+  min_gain: 0.07
+  frequency_smoothing: 1.5
+  time_smoothing: 1.0
+  nperseg: 512
+  hop: 128
+wiener:
+  min_gain: 0.06
+  smoothing_frequency: 1.5
+  smoothing_time: 2.0
+  nperseg: 512
+  hop: 128

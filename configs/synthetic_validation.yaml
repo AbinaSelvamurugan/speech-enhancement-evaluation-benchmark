@@ -1,0 +1,12 @@
+# Synthetic test-signal run for pipeline reproducibility checks.
+manifest: ../results/synthetic_validation/fixtures/manifest.json
+output_dir: ../results/synthetic_validation
+sample_rate: 16000
+segment_seconds: 2.0
+snrs_db: [-5, 0, 5]
+seed: 20240101
+max_recordings: 0
+algorithms: [noisy, spectral_subtraction, spectral_gating, wiener]
+noise_profile: oracle
+save_audio: true
+warmup: true

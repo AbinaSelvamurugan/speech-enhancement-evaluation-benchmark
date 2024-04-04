@@ -1,0 +1,12 @@
+# Paths are relative to this YAML file's parent (the configs directory).
+manifest: ../data/manifest.json
+output_dir: ../results/benchmark
+sample_rate: 16000
+segment_seconds: 4.0
+snrs_db: [-5, 0, 5, 10, 15]
+seed: 20240101
+max_recordings: 0   # 0 means all
+algorithms: [noisy, spectral_subtraction, spectral_gating, wiener]
+noise_profile: oracle  # 'oracle' = independent noise recording; 'blind' = mixture quantile
+save_audio: true
+warmup: true

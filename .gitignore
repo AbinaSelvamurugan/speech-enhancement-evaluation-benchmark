@@ -1,0 +1,39 @@
+# Python build environments and caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+build/
+dist/
+
+# Never push local datasets, manifests with private paths, checkpoints, or audio.
+# Only the data documentation is tracked by default.
+data/*
+!data/README.md
+*.wav
+*.flac
+*.mp3
+*.ogg
+*.opus
+*.mp4
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Generated benchmark data and validation WAVs are not committed by default.
+# The small tracked sample lives in examples/synthetic_validation/.
+results/*
+!results/README.md
+
+# Local user settings and editor files
+.DS_Store
+.idea/
+.vscode/
+*.swp
