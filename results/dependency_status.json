@@ -1,0 +1,22 @@
+{
+  "python": "3.13.5",
+  "dependencies": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "soundfile": "0.13.1",
+    "pystoi": "0.4.1",
+    "pesq": "UNAVAILABLE: No module named 'pesq'",
+    "matplotlib": "3.10.8",
+    "pandas": "2.2.3",
+    "yaml": "6.0.3",
+    "pytest": "9.0.2",
+    "ruff": "UNAVAILABLE: No module named 'ruff'"
+  },
+  "methods": [
+    "noisy",
+    "spectral_subtraction",
+    "spectral_gating",
+    "wiener"
+  ],
+  "pesq_supported": "wb@16000 or nb@8000/16000; project enforces nb@8k, wb@16k"
+}

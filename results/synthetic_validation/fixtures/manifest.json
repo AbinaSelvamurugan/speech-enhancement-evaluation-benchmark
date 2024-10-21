@@ -1,0 +1,35 @@
+{
+  "kind": "synthetic_test_only",
+  "recordings": [
+    {
+      "id": "synthetic_proxy_0",
+      "clean": "clean_0.wav",
+      "noise": "noise_0.wav",
+      "noise_category": "synthetic_white_noise",
+      "clean_license": "original synthetic test fixture (MIT project)",
+      "noise_license": "original synthetic test fixture (MIT project)",
+      "clean_source": "scripts/make_synthetic_fixture.py \u2014 not a speech recording",
+      "noise_source": "scripts/make_synthetic_fixture.py \u2014 not an environmental recording"
+    },
+    {
+      "id": "synthetic_proxy_1",
+      "clean": "clean_1.wav",
+      "noise": "noise_1.wav",
+      "noise_category": "synthetic_tonal_noise",
+      "clean_license": "original synthetic test fixture (MIT project)",
+      "noise_license": "original synthetic test fixture (MIT project)",
+      "clean_source": "scripts/make_synthetic_fixture.py \u2014 not a speech recording",
+      "noise_source": "scripts/make_synthetic_fixture.py \u2014 not an environmental recording"
+    },
+    {
+      "id": "synthetic_proxy_2",
+      "clean": "clean_2.wav",
+      "noise": "noise_2.wav",
+      "noise_category": "synthetic_white_noise",
+      "clean_license": "original synthetic test fixture (MIT project)",
+      "noise_license": "original synthetic test fixture (MIT project)",
+      "clean_source": "scripts/make_synthetic_fixture.py \u2014 not a speech recording",
+      "noise_source": "scripts/make_synthetic_fixture.py \u2014 not an environmental recording"
+    }
+  ]
+}

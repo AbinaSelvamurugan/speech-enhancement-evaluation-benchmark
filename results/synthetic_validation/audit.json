@@ -1,0 +1,11 @@
+{
+  "verdict": "PASS: CSV structure and arithmetic",
+  "manifest_kind": "synthetic_test_only",
+  "cases": 9,
+  "rows": 36,
+  "independent_recording_ids": 3,
+  "valid_pesq": 0,
+  "valid_stoi": 36,
+  "algorithm_failures": 0,
+  "metric_partial": 36
+}

@@ -1,0 +1,95 @@
+{
+  "manifest_kind": "synthetic_test_only",
+  "benchmark_version": "1.0.0",
+  "manifest": "results/synthetic_validation/fixtures/manifest.json",
+  "manifest_sha256": "2733b1a6aa25f2f9522a5191932959eff4615a6ca0e5e7ec2d3455f108fe080a",
+  "config_sha256": "a5b65b1da4026114a04836fe02cebca68c0fac36fbc3195e05627bc1d7e66ccf",
+  "python": "3.13.5",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "sample_rate": 16000,
+  "segment_seconds": 2.0,
+  "seed": 20240101,
+  "snrs_db": [
+    -5.0,
+    0.0,
+    5.0
+  ],
+  "algorithms": [
+    "noisy",
+    "spectral_subtraction",
+    "spectral_gating",
+    "wiener"
+  ],
+  "noise_profile": "oracle",
+  "metrics": {
+    "pesq_mode": "wb",
+    "stoi_extended": false,
+    "power_floor": 1e-12,
+    "bootstrap_iterations": 2000,
+    "confidence_level": 0.95
+  },
+  "algorithm_options": {
+    "spectral_subtraction": {
+      "subtraction_strength": 1.15,
+      "spectral_floor": 0.07,
+      "nperseg": 512,
+      "hop": 128
+    },
+    "spectral_gating": {
+      "threshold": 1.5,
+      "reduction_strength": 0.92,
+      "min_gain": 0.07,
+      "frequency_smoothing": 1.5,
+      "time_smoothing": 1.0,
+      "nperseg": 512,
+      "hop": 128
+    },
+    "wiener": {
+      "min_gain": 0.06,
+      "smoothing_frequency": 1.5,
+      "smoothing_time": 2.0,
+      "nperseg": 512,
+      "hop": 128
+    }
+  },
+  "timing": "enhance() only; excludes loading, resampling, warmup, scoring, saving",
+  "alignment": "zero-lag equal-length exact samples; no post hoc shifting",
+  "recordings": [
+    {
+      "recording_id": "synthetic_proxy_0",
+      "clean": "results/synthetic_validation/fixtures/clean_0.wav",
+      "noise": "results/synthetic_validation/fixtures/noise_0.wav",
+      "clean_sha256": "16d8ce2e6ce65a26ef5fb7014066b82382a660378787bf092dae966b76808819",
+      "noise_sha256": "7c20c8feb60a416032679c9d9e21469d30816e26de9acb853ff9bccdfc39357f",
+      "clean_license": "original synthetic test fixture (MIT project)",
+      "noise_license": "original synthetic test fixture (MIT project)",
+      "clean_source": "scripts/make_synthetic_fixture.py \u2014 not a speech recording",
+      "noise_source": "scripts/make_synthetic_fixture.py \u2014 not an environmental recording"
+    },
+    {
+      "recording_id": "synthetic_proxy_1",
+      "clean": "results/synthetic_validation/fixtures/clean_1.wav",
+      "noise": "results/synthetic_validation/fixtures/noise_1.wav",
+      "clean_sha256": "7b0bcf220148be33cbd6aa39c7f044dacea8b3deb5c10a95c336133f91441829",
+      "noise_sha256": "6970bb3cf4bee26c04febe731cfef1e07973ae8dffd65384d7c09442a41e6be5",
+      "clean_license": "original synthetic test fixture (MIT project)",
+      "noise_license": "original synthetic test fixture (MIT project)",
+      "clean_source": "scripts/make_synthetic_fixture.py \u2014 not a speech recording",
+      "noise_source": "scripts/make_synthetic_fixture.py \u2014 not an environmental recording"
+    },
+    {
+      "recording_id": "synthetic_proxy_2",
+      "clean": "results/synthetic_validation/fixtures/clean_2.wav",
+      "noise": "results/synthetic_validation/fixtures/noise_2.wav",
+      "clean_sha256": "7ad549bc56425887cbdb6a1906c2d391fcbb56b6979c7f09a543dbb5fc4022d5",
+      "noise_sha256": "5a0444e81e9f4219e806ac3107f9cd582bde9c29e4e704357479669cc74d0afb",
+      "clean_license": "original synthetic test fixture (MIT project)",
+      "noise_license": "original synthetic test fixture (MIT project)",
+      "clean_source": "scripts/make_synthetic_fixture.py \u2014 not a speech recording",
+      "noise_source": "scripts/make_synthetic_fixture.py \u2014 not an environmental recording"
+    }
+  ],
+  "cases": 9,
+  "rows": 36
+}
