@@ -125,3 +125,29 @@ speech-benchmark report --results results/synthetic_validation/benchmark.csv
 
 This run exercises the full pipeline on the generated fixture and writes its results to
 `results/synthetic_validation/`.
+
+## Real-data run (21 October 2024)
+
+Executed with `speech-benchmark run` on a Modal container using real recordings built by
+`scripts/build_real_manifest.py`: 40 LibriSpeech test-clean speakers (one utterance per speaker, CC BY 4.0) mixed
+with four DEMAND noise environments (traffic, babble, household, office; CC BY 4.0) at -5, 0, 5, 10 and 15 dB
+(200 mixtures, 800 algorithm evaluations, 0 failures; PESQ and STOI valid for all). Noise profile: `oracle`
+(independent noise recording). Full report: `results/benchmark/report.md`.
+
+Mean over all conditions (average input SNR 5 dB):
+
+| Method | PESQ | STOI | SNR improvement (dB) |
+|--------|------|------|----------------------|
+| Noisy input | 1.79 | 0.905 | 0.00 |
+| Spectral subtraction | **2.28** | 0.904 | **+7.72** |
+| Spectral gating | 2.21 | 0.906 | +5.17 |
+| Wiener filter | 2.11 | 0.905 | +6.28 |
+
+All three methods raise PESQ and SNR over the noisy input, but none improves estimated intelligibility (STOI is
+unchanged at about 0.905). Objective metrics are not a listening study.
+
+![Mean PESQ by enhancement method](results/benchmark/figures/mean_pesq.png)
+
+![PESQ and STOI trade-off by method](results/benchmark/figures/pesq_stoi_tradeoff.png)
+
+The per-condition figures and the full report are in `results/benchmark/`.
